@@ -15,6 +15,6 @@
 ## GitHub Pages 部署
 
 1. 将此目录初始化为 Git 仓库并推送到 GitHub。
-2. 在仓库 **Settings → Pages** 中选择 **Deploy from a branch**。
-3. 选择 `main` 分支与 `/(root)` 目录并保存。
-4. 自定义域名可在同一页面绑定 `dingtuedu.com`，并按 GitHub 提示配置 DNS。
+2. GitHub Actions 会在每次推送到 `main` 后自动部署到 GitHub Pages。
+3. 在仓库 **Settings → Pages** 中选择 **GitHub Actions** 作为发布源。
+4. 根目录的 `CNAME` 已指定 `dingtuedu.com`；请按 GitHub 提示将域名 DNS 指向 GitHub Pages。

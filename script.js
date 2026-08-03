@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if (document.querySelector('.page-hero')) {
+    const pageStyles = document.createElement('link');
+    pageStyles.rel = 'stylesheet';
+    pageStyles.href = 'content-pages.css';
+    document.head.append(pageStyles);
+  }
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav');
   if (menuToggle && nav) menuToggle.addEventListener('click', () => {
