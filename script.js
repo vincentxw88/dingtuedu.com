@@ -19,4 +19,12 @@ document.addEventListener('DOMContentLoaded', () => {
     filters.forEach((item) => item.classList.toggle('active', item === button));
     groups.forEach((group) => group.classList.toggle('is-hidden', filter !== 'all' && group.dataset.group !== filter));
   }));
+
+  const resultFilters = document.querySelectorAll('.result-filter');
+  const resultGroups = document.querySelectorAll('.school-group');
+  resultFilters.forEach((button) => button.addEventListener('click', () => {
+    const filter = button.dataset.resultFilter;
+    resultFilters.forEach((item) => item.classList.toggle('active', item === button));
+    resultGroups.forEach((group) => group.classList.toggle('is-hidden', filter !== 'all' && group.dataset.resultGroup !== filter));
+  }));
 });
